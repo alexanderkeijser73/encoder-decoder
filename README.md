@@ -60,3 +60,17 @@ Note that inside folder `OpenNMT-py` some folders can be ignored (these are for 
 In `trained_models` there are two models: the one starting with `ted` is the one we need.
 
 I used `txtdata` to play around, this can be ignored.
+
+We can install the necessary files for using the BEER metric by executing the command:
+
+```
+wget https://raw.githubusercontent.com/stanojevic/beer/master/packaged/beer_2.0.tar.gz
+tar xfvz beer_2.0.tar.gz
+```
+
+From the beer_2.0 directory, the evaluation can be run using the command:
+
+```
+./beer -s system_translations.txt -r reference_translations.txt --printSentScores
+```
+
